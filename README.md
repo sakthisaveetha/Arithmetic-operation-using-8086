@@ -83,6 +83,7 @@ END
 
 
 #### Program
+```asm
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
 ORG 1000H
@@ -90,7 +91,7 @@ MOV SI,2000H
 MOV CL,00H
 MOV AX,[SI]
 MOV BX,[SI+02H]
-SUB AX,BX
+ADD AX,BX
 JNC L1
 INC CL
 L1:
@@ -100,6 +101,7 @@ MOV AH,4CH
 INT 21H
 CODE ENDS
 END
+```
 
 
 #### Output Table
